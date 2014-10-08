@@ -1,0 +1,8 @@
+hello
+hello.zip
+*.o
+*~
+downloads/vasm.tar.gz
+downloads/vlink.tar.gz
+vasm/
+vlink/
