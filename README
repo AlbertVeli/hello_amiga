@@ -3,32 +3,36 @@ Hello Amiga
 
 Cross compilation of a standard hello world program for the Amiga
 
-Compile on OS X or GNU/Linux and run the hello executable from an Amiga emulator (UAE).
+Compile on OS X or GNU/Linux and run the hello executable from an
+Amiga emulator (UAE).
 
-It should be enough to clone this repo and run make from the base directory. That
-should download the vasm assembler and vlink linker, build them, compile the hello
-executable from the hello.s source code and finally create a zip-file containing
-only the hello Amiga executable.
+It should be enough to clone this repo and run make from the base
+directory. That should download the vasm assembler and vlink linker,
+build them, compile the hello executable from the hello.s source code
+and finally create a zip-file containing only the hello Amiga
+executable.
 
-Note. A zip-file can be mounted as a harddisk from the UAE Amiga emulator.
+Note. A zip-file can be mounted as a harddisk from UAE.
 
 
 UAE instructions
 ================
 
-First you have to specify kickstart and workbench images. The most common Amiga model
-was the 500. Use kickstart/workbench 1.3 for that model (Can be bought from Amiga Forever
-or if you own an Amiga 500, you can legally download the images from the internet).
+First you have to specify kickstart and workbench images. The most
+common Amiga model was the 500. Use kickstart/workbench 1.3 for that
+model (Can be bought from Amiga Forever or if you own an Amiga 500,
+you can legally download the images from the internet).
 
-Select the kickstart 1.3 image as Kickstart ROM and the Workbench 1.3 image as the
-first hard disk.
+Select the kickstart 1.3 image as Kickstart ROM and the Workbench 1.3
+image as the first hard disk.
 
-Now select hello.zip (created by running make) as the second hard disk in UAE and
-click Start to fire up the emulator.
+Now select hello.zip (created by running make) as the second hard disk
+in UAE and click Start to fire up the emulator.
 
-Klick on Workbench1.3 and then Shell to enter the Amiga shell. The second hard disk
-should be named DH1. So run the command "cd DH1" followed by "DIR" (to list the
-contents of the zip-file, posing as hard disk).
+Klick on Workbench1.3 and then Shell to enter the Amiga shell. The
+second hard disk should be named DH1. So run the command "cd DH1"
+followed by "DIR" (to list the contents of the zip-file, posing as
+hard disk).
 
 1.SYS:> cd DH1:
 1.DH1:> dir
@@ -44,8 +48,8 @@ If it prints "Hello, World!" then it works.
 Now what?
 =========
 
-Now you can start replacing the assembly code in hello.s with your own code, run make
-again and execute your code inside the UAE emulator.
+Now you can start replacing the assembly code in hello.s with your own
+code, run make again and execute your code inside the UAE emulator.
 
 
 Good Luck!
@@ -56,6 +60,6 @@ Señor Albert "Hickle Fickle" Veli
 Sweetmorn, the 62nd day of Bureaucracy in the YOLD 3180
 
 
-PS Om du talar svenska, se demoskolan för Amiga som startar i nummer 1990-09
-av SHN: http://hemdatornytt2.selda.se/?page_id=7 samt Amiga Hardware Reference
-Manual (finns som bok, förmodligen också online).
+PS Om du talar svenska, se demoskolan för Amiga som startar i nummer
+1990-09 av SHN: http://hemdatornytt2.selda.se/?page_id=7 samt Amiga
+Hardware Reference Manual (finns som bok, förmodligen också online).
