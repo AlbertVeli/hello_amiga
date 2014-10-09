@@ -30,8 +30,8 @@ Now select hello.zip (created by running make) as the second hard disk
 in UAE and click Start to fire up the emulator.
 
 Klick on Workbench1.3 and then Shell to enter the Amiga shell. The
-second hard disk should be named DH1. So run the command "cd DH1"
-followed by "DIR" (to list the contents of the zip-file, posing as
+second hard disk should be named DH1. So run the command "cd DH1:"
+followed by "dir" (to list the contents of the zip-file, posing as
 hard disk).
 
 1.SYS:> cd DH1:
@@ -52,6 +52,14 @@ Now you can start replacing the assembly code in hello.s with your own
 code, run make again and execute your code inside the UAE emulator.
 
 
+Learn the Amiga
+===============
+
+* Amiga Hardware Reference Manual
+* Amiga System Programmer's Guide
+  http://lmgtfy.com/?q=amiga+system+programmers+guide+pdf
+
+
 Good Luck!
 
 
@@ -61,5 +69,4 @@ Sweetmorn, the 62nd day of Bureaucracy in the YOLD 3180
 
 
 PS Om du talar svenska, se demoskolan för Amiga som startar i nummer
-1990-09 av SHN: http://hemdatornytt2.selda.se/?page_id=7 samt Amiga
-Hardware Reference Manual (finns som bok, förmodligen också online).
+1990-09 av SHN: http://hemdatornytt2.selda.se/?page_id=7
