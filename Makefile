@@ -1,11 +1,14 @@
-# Change this to copper to build the copper.s example
+# Change this to copper or playfields to build other examples
 EXE = hello
+
 # Add more .o files here to use multiple sources
 OBJS = $(EXE).o
 
+# Amiga cross-assembler/linker
 AS = vasm/vasmm68k_mot
 LD = vlink/vlink
 
+# Flags to assembler and linker
 ASFLAGS = -Fhunk -spaces
 LDFLAGS = -bamigahunk -s
 

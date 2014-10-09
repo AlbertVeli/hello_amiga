@@ -1,6 +1,9 @@
+;;; -*- mode: asm; -*-
+;;; -*- asm-comment-char: ?\; -*-
+;;;
 ;;; *** Example for a simple Copperlist ***
 ;;;
-;;; From Amiga System Programmer's Guide
+;;; From Amiga System Programmer's Guide, page 93-95
 
 ;; CustomChip-Registers
 INTENA = $9A			; Interrupt-Enable-Register (write)
@@ -41,7 +44,7 @@ Start:
 	move.l	d0, CLaddr	; Address of the RAM-area memory
 	beq.s	Ende		; Error! -> End
 
-;; copy Copperlist to Claddr
+;; copy Copperlist to CLaddr
 	lea	CLstart, a0
 	move.l	CLaddr, a1
 	moveq 	#CLsize-1, d0	; loop value

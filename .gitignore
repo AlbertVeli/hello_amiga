@@ -1,8 +1,10 @@
 hello
 copper
+playfields
 *.zip
 *.o
 *~
+.DS_Store
 docs/
 downloads/vasm.tar.gz
 downloads/vlink.tar.gz
