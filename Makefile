@@ -1,30 +1,31 @@
+# Change this to copper to build the copper.s example
+EXE = hello
 # Add more .o files here to use multiple sources
-OBJS = hello.o
+OBJS = $(EXE).o
 
 AS = vasm/vasmm68k_mot
 LD = vlink/vlink
 
-all: hello.zip
+ASFLAGS = -Fhunk -spaces
+LDFLAGS = -bamigahunk -s
 
-# Template to build .o files from .s files
-%.o: %.s $(AS)
-	$(AS) -Fhunk -spaces -o $@ $<
+all: $(EXE).zip
 
 # Zip executable into hello.zip
 # A zip-file can be mounted as a hard drive in UAE
-hello.zip: hello
+$(EXE).zip: $(EXE)
 	zip $@ $<
 
 # Link hello.o into Amiga executable hello
-hello: $(OBJS) $(LD)
-	$(LD) -bamigahunk -o $@ -s $(OBJS)
+$(EXE): $(OBJS) $(LD)
+	$(LD) $(LDFLAGS) -o $@ $(OBJS)
 
-# Build the Amiga assembler
+# Build the Amiga cross-assembler
 $(AS): downloads/vasm.tar.gz
 	tar zxvf downloads/vasm.tar.gz
 	make CPU=m68k SYNTAX=mot -C vasm
 
-# And the Amiga linker
+# And the Amiga cross-linker
 $(LD): downloads/vlink.tar.gz
 	tar zxvf downloads/vlink.tar.gz
 	make CPU=m68k SYNTAX=mot -C vlink
@@ -39,4 +40,4 @@ downloads/vlink.tar.gz:
 .PHONY: clean
 
 clean:
-	rm -f hello.zip hello $(OBJS) *~
+	rm -f $(EXE).zip $(EXE) $(OBJS) *~

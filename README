@@ -12,7 +12,7 @@ build them, compile the hello executable from the hello.s source code
 and finally create a zip-file containing only the hello Amiga
 executable.
 
-Note. A zip-file can be mounted as a harddisk from UAE.
+Note. A zip-file can be mounted as a harddisk in (at least) FS-UAE.
 
 
 UAE instructions

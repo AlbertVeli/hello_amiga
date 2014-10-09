@@ -1,5 +1,6 @@
 hello
-hello.zip
+copper
+*.zip
 *.o
 *~
 docs/
