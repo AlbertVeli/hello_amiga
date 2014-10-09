@@ -2,6 +2,7 @@ hello
 hello.zip
 *.o
 *~
+docs/
 downloads/vasm.tar.gz
 downloads/vlink.tar.gz
 vasm/
