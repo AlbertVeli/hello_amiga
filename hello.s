@@ -9,7 +9,6 @@ _LVOOpenLibrary EQU -552
 _LVOCloseLibrary EQU -414
 _LVOOutput EQU -60		; Ret stdout file in d0
 _LVOWrite EQU -48		; Write(file, buf, len)(d1/d2/d3)
-_LVOFPuts EQU -342		; FPuts(fh,str)(d1/d2)
 
 start:
 	move.l	4.w, a6
