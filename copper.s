@@ -30,7 +30,7 @@ CLcopy:
 ;; *** Main program ***
 
 	jsr	Forbid(a6)	; Task Switching off
-	lea	$dff000, a5	; Base addr -> a5
+	lea	CUSTOM, a5	; CustomChip base addr -> a5
 
 	move.w	#$03a0, DMACON(a5) ; DMA off
 	move.l	CLaddr, COP1LC(a5) ; Copperlist addr -> COP1LC
@@ -59,6 +59,10 @@ Wait:	btst	#6, CIAAPRA	; Bit 6 in CIA-A
 	move.l	CLaddr, a1	; Set parameter for FreeMem
 	moveq	#CLsize, d0
 	jsr	FreeMem(a6)
+
+;; Close graphics.library
+	move.l	a4, a1
+	jsr	CloseLibrary(a6)
 
 End:
 	clr.l	d0		; error flag erased

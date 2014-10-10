@@ -56,7 +56,7 @@ MakeCL:
 
 ;; DMA and Task switching off
 	jsr	Forbid(a6)
-	lea	$dff000, a5
+	lea	CUSTOM, a5
 	move.w	#$01e0, DMACON(a5)
 
 ;; Copper initialization
@@ -171,6 +171,10 @@ FreePlane:
 	move.l	Planeaddr, a1
 	move.l	#Planesize*2, d0
 	jsr	FreeMem(a6)
+
+;; Close graphics.library
+	move.l	a4, a1
+	jsr	CloseLibrary(a6)
 
 End:
 	clr.l	d0

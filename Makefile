@@ -1,4 +1,4 @@
-# Change this to copper or playfields to build other examples
+# Change this to copper, playfields or sprite to build other examples
 EXE = hello
 
 # Add more .o files here to use multiple sources
@@ -11,6 +11,12 @@ LD = vlink/vlink
 # Flags to assembler and linker
 ASFLAGS = -Fhunk -spaces
 LDFLAGS = -bamigahunk -s
+
+# Insert $(AS) as dependency for building .o
+# files. That way vasmm68k_mot will be built
+# before trying to assemble first file.
+%.o: %.s $(AS)
+	$(AS) $(ASFLAGS) -o $@ $<
 
 all: $(EXE).zip
 
