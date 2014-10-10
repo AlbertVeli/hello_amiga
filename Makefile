@@ -1,4 +1,4 @@
-# Change this to copper, playfields or sprite to build other examples
+# Change this to copper, playfields, sprite or c1 to build other examples
 EXE = hello
 
 # Add more .o files here to use multiple sources
