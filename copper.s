@@ -1,38 +1,13 @@
 ;;; -*- mode: asm; -*-
 ;;; -*- asm-comment-char: ?\; -*-
+;;; vim: syntax=asm68k ts=8 sw=8
 ;;;
 ;;; *** Example for a simple Copperlist ***
 ;;;
 ;;; From Amiga System Programmer's Guide, page 93-95
 
-;; CustomChip-Registers
-INTENA = $9A			; Interrupt-Enable-Register (write)
-DMACON = $96			; DMA—control register (write)
-COLOR00 = $180			; Color palette register 0
-
-;; Copper Registers
-COP1LC = $80			; Address of 1. Copper list
-COP2LC = $84			; Address of 2. Copper list
-COPJMP1 = $88			; Jump to Copper list 1
-COPJMP2 = $8a			; Jump to Copper list 2
-
-;; CIA-A Port register A (Mouse key)
-CIAAPRA = $BFE001
-
-;; Exec Library Base Offsets
-OpenLibrary = -30-522		; LibName,Version/al,d0
-Forbid = -30-102
-Permit = -30-108
-AllocMem = -30-168		; Byte Size, Requirements/d0,d1
-FreeMem = -30-180		; Memory Block, Byte Size/al,d0
-
-;; graphics base
-StartList = 38
-
-;; other Labels
-
-Execbase = 4
-Chip = 2			; request Chip-RAM
+	;; Include register and offset defines
+	include registers.i
 
 ;; *** Initialize-program ***
 
@@ -42,7 +17,7 @@ Start:
 	moveq	#Chip, d1
 	jsr	AllocMem(a6)
 	move.l	d0, CLaddr	; Address of the RAM-area memory
-	beq.s	Ende		; Error! -> End
+	beq.s	End		; Error! -> End
 
 ;; copy Copperlist to CLaddr
 	lea	CLstart, a0
@@ -85,7 +60,7 @@ Wait:	btst	#6, CIAAPRA	; Bit 6 in CIA-A
 	moveq	#CLsize, d0
 	jsr	FreeMem(a6)
 
-Ende:
+End:
 	clr.l	d0		; error flag erased
 	rts			; end program
 
