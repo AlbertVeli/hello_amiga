@@ -44,7 +44,11 @@ Now execute the hello binary by simply entering the command hello:
 
 If it prints "Hello, World!" then it works.
 
-Optimization tip, try:
+
+CLI tip
+=======
+
+try:
 
 1.SYS:> dh1:hello              ; without the cd command
 
@@ -68,13 +72,13 @@ By the way
 ==========
 
 Since the time that has elapsed since I wrote the sentences above I've
-committed some examples from those books. To try out these examples,
-just change the second line in the Makefile from:
+committed some examples. To try them, just change the second line in
+the Makefile from:
 
 EXE = hello
 
 to the name of one of the other .s files in the repo (without the .s
-extesion):
+extension):
 
 * EXE = hello        ; Hello, World! program using dos.library
 * EXE = copper       ; Copper coprocessor example
