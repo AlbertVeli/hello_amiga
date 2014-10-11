@@ -36,13 +36,17 @@ hard disk).
 
 1.SYS:> cd DH1:
 1.DH1:> dir
- .info   hello
+  .info   hello
 
-Now you can execute the hello binary by simply entering the command hello:
+Now execute the hello binary by simply entering the command hello:
 
 1.DH1:> hello
 
 If it prints "Hello, World!" then it works.
+
+Optimization tip, try:
+
+1.SYS:> dh1:hello              ; without the cd command
 
 
 Now what?
@@ -58,6 +62,34 @@ Learn the Amiga
 * Amiga Hardware Reference Manual
 * Amiga System Programmer's Guide
   http://lmgtfy.com/?q=amiga+system+programmers+guide+pdf
+
+
+By the way
+==========
+
+Since the time that has elapsed since I wrote the sentences above I've
+committed some examples from those books. To try out these examples,
+just change the second line in the Makefile from:
+
+EXE = hello
+
+to the name of one of the other .s files in the repo (without the .s
+extesion):
+
+* EXE = hello        ; Hello, World! program using dos.library
+* EXE = copper       ; Copper coprocessor example
+* EXE = playfields   ; Playfields example
+* EXE = c1           ; Copper-1 from vikke.net (floating copper bars)
+
+I have successfully compiled all of the examples with vasm/vlink and
+executed them on the UAE emulator (using Kickstart ROM v1.3).
+
+
+TODO
+====
+
+* Add sprite example
+* And blitter example
 
 
 Good Luck!
