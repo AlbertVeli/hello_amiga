@@ -65,7 +65,7 @@ Learn the Amiga
 
 * Amiga Hardware Reference Manual
 * Amiga System Programmer's Guide
-  http://lmgtfy.com/?q=amiga+system+programmers+guide+pdf
+  http://www.retro-commodore.eu/amiga-development/
 
 
 By the way
@@ -92,8 +92,7 @@ executed them on the UAE emulator (using Kickstart ROM v1.3).
 TODO
 ====
 
-* Add sprite example
-* And blitter example
+* Add examples from http://coppershade.org/
 
 
 Good Luck!
@@ -108,11 +107,11 @@ Sweetmorn, the 62nd day of Bureaucracy in the YOLD 3180
 .
 
 PS Om du talar svenska, se demoskolan för Amiga som startar i nummer
-1990-09 av SHN: http://hemdatornytt2.selda.se/arkiv/
+1990-09 av SHN: http://hemdatornytt2.selda.se/tidningsarkiv/
 
 .
 
-```html
+```
                   █▒░░░▒░▒█
             █▓▓░   ░░▓▓▓▓▓▓▓░░░▒▓
          ▓░ ░▓▓▓▓▓▒░▓▓▓▓▓▓▓▒░░░░░██▒
